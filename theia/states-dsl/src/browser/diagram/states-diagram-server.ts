@@ -1,10 +1,10 @@
 import { inject, injectable } from "inversify";
-import { TheiaDiagramServer } from "sprotty-theia/lib";
+import { LSTheiaDiagramServer } from "sprotty-theia/lib";
 import { CompletionLabelEditor, isTraceable, RenameLabelEditor } from "sprotty-theia/lib/sprotty/languageserver";
 import { Action, ActionHandlerRegistry, EditLabelAction, getSubType, IActionDispatcher, ILogger, IModelFactory, ReconnectCommand, SLabel, SModelRoot, SModelStorage, TYPES, ViewerOptions } from "sprotty/lib";
 
 @injectable()
-export class StatesDiagramServer extends TheiaDiagramServer {
+export class StatesDiagramServer extends LSTheiaDiagramServer {
 
     @inject(CompletionLabelEditor) completionLabelEditor: CompletionLabelEditor;
     @inject(RenameLabelEditor) renameLabelEditor: RenameLabelEditor;
